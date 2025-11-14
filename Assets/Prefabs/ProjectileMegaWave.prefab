@@ -159,6 +159,7 @@ MonoBehaviour:
   projectileType: {fileID: 11400000, guid: a4451a5e0c02e4b2fbd7bb9212710165, type: 2}
   explosionPrefab: {fileID: 2826158678119041950, guid: a76f9c4b3bbd7acd79b7b115a3685b32, type: 3}
   direction: {x: 0, y: 0}
+  shootSound: {fileID: 8300000, guid: 5c520e5df7d2e3f3f96667a588e16b47, type: 3}
   velocity: {x: 0, y: 0}
   currentSpeed: 0
 --- !u!95 &-3103010640810453136

@@ -8,6 +8,8 @@ public class Projectile : MonoBehaviour
     [SerializeField] private GameObject explosionPrefab; // animation for enemy explosion
     [SerializeField] private Vector2 direction;
     // [SerializeField] private Vector2 direction = new Vector2(1, 0);
+    [SerializeField] private AudioClip shootSound;
+    public AudioClip ShootSound => shootSound;
     [SerializeField] private Vector2 velocity;
     [SerializeField] private float currentSpeed;
 

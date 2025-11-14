@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1289209553
-  m_SortingLayer: 4
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: -1844928235, guid: 2ecdd801315ce9edd89d18d7550d694b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -123,9 +123,9 @@ MonoBehaviour:
   projectileType: {fileID: 11400000, guid: 7b4c391070b6fa3ca99fe9ffbfdc3902, type: 2}
   explosionPrefab: {fileID: 2826158678119041950, guid: a76f9c4b3bbd7acd79b7b115a3685b32, type: 3}
   direction: {x: 1, y: 0}
+  shootSound: {fileID: 8300000, guid: 68d43c81ac6d465f48f489c3936dcb84, type: 3}
   velocity: {x: 0, y: 0}
   currentSpeed: 15
-  currentDamage: 0
 --- !u!70 &3882626596338515795
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

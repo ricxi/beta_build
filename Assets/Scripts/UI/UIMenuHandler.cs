@@ -24,6 +24,6 @@ public class UIMenuHandler : MonoBehaviour
 
     public void OnInstructionsButtonClicked()
     {
-        Debug.Log("Instructions Scene to be created");
+        SceneManager.LoadScene(InstructionsSceneName);
     }
 }

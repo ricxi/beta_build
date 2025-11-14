@@ -49,6 +49,7 @@ Richard Xiong
 ## Additions
 A list of changes since the beta
 - Main Menu Background Music
-- Mouse Cursor
+- Added Custom Mouse Cursor
 - Main Menu Backround Images
 - Main Menu Button Click Sound
+- Added sound to weapons 
