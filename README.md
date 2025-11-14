@@ -44,3 +44,11 @@ Richard Xiong
 
 - ships
     - https://disruptorart.itch.io/tiny-ships-free-spaceships
+
+
+## Additions
+A list of changes since the beta
+- Main Menu Background Music
+- Mouse Cursor
+- Main Menu Backround Images
+- Main Menu Button Click Sound
