@@ -53,3 +53,4 @@ A list of changes since the beta
 - Main Menu Backround Images
 - Main Menu Button Click Sound
 - Added sound to weapons 
+- Added low health sound effect

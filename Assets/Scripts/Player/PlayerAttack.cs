@@ -16,9 +16,9 @@ public class PlayerAttack : MonoBehaviour
         if (bulletPrefab != null) currentWeapon = bulletPrefab;
         else Debug.LogError("Missing: currentWeapon must have Projectile reference default.");
 
-        if (!audioSource) audioSource = GetComponent<AudioSource>();
-        if (!currentWeapon.ShootSound) shootSound = defaultShootSound;
-        else shootSound = currentWeapon.ShootSound;
+        // if (!audioSource) audioSource = GetComponent<AudioSource>();
+        // if (!currentWeapon.ShootSound) shootSound = defaultShootSound;
+        // else shootSound = currentWeapon.ShootSound;
     }
 
     private void FixedUpdate()
