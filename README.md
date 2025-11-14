@@ -40,6 +40,7 @@ Richard Xiong
     - https://aske4.itch.io/free-space-station
 
 - Heart Animation
+    - https://nicolemariet.itch.io/pixel-heart-animation-32x32-16x16-freebie
 
 - ships
     - https://disruptorart.itch.io/tiny-ships-free-spaceships
