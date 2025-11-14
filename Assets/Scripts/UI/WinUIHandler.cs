@@ -12,6 +12,7 @@ public class WinUIHandler : MonoBehaviour
 
     private void Start()
     {
+
         if (GameManager.Instance != null)
         {
             foreach (var pgo in GameManager.Instance.PersistentGameObjects)
@@ -20,29 +21,20 @@ public class WinUIHandler : MonoBehaviour
                 {
                     PlayerScore ps = pgo.GetComponent<PlayerScore>(); // Maybe perform a null check
                     scoreText.text = "SCORE:\n" + ps.Score;
-                    Destroy(pgo);
                 }
-
-                if (pgo.name == "PlayerUIManager")
-                {
-                    Destroy(pgo);
-                }
-
-                if (pgo.name == "PlayerUI")
-                    Destroy(pgo);
             }
+            GameManager.Instance.DestroyAll();
         }
+
     }
 
     public void OnRestartButtonClicked()
     {
-        GameManager.Instance.DestroyAll();
         SceneManager.LoadScene(FirstLevelSceneName);
     }
 
     public void OnMainMenuButtonClicked()
     {
-        GameManager.Instance.DestroyAll();
         SceneManager.LoadScene(StartScreenSceneName);
     }
 

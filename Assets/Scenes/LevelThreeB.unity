@@ -1873,7 +1873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459631554201033191, guid: d4bff901fc8ba73888931323889c62b6, type: 3}
       propertyPath: nextSceneName
-      value: WinScreen
+      value: FinalWinScreen
       objectReference: {fileID: 0}
     - target: {fileID: 9098365875052840703, guid: d4bff901fc8ba73888931323889c62b6, type: 3}
       propertyPath: m_Name
