@@ -7,6 +7,7 @@ public class CoinPickup : MonoBehaviour
 {
     [SerializeField] private int points = 5;
     [SerializeField] private GameObject popupCanvasPrefab;
+    [SerializeField] private AudioClip audioClip;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,6 +15,7 @@ public class CoinPickup : MonoBehaviour
         if (player != null)
         {
             ShowPoints();
+            AudioManager.Instance.PlayOneShot(audioClip);
             player.UpdateScore(points);
             Destroy(gameObject);
         }

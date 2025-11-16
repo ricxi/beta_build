@@ -5,20 +5,15 @@ public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private Projectile bulletPrefab;
     [SerializeField] private Transform gunpoint;
-    // [SerializeField] private AudioClip shootSound;
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip defaultShootSound;
     private Projectile currentWeapon;
-    private AudioClip shootSound;
+    // private AudioManager audioManager;
 
     private void Start()
     {
+        // audioManager = GetComponent<AudioManager>();
+
         if (bulletPrefab != null) currentWeapon = bulletPrefab;
         else Debug.LogError("Missing: currentWeapon must have Projectile reference default.");
-
-        // if (!audioSource) audioSource = GetComponent<AudioSource>();
-        // if (!currentWeapon.ShootSound) shootSound = defaultShootSound;
-        // else shootSound = currentWeapon.ShootSound;
     }
 
     private void FixedUpdate()
@@ -32,7 +27,7 @@ public class PlayerAttack : MonoBehaviour
     public void Fire()
     {
         GameObject gameObject = Instantiate(currentWeapon.gameObject, gunpoint.position, Quaternion.identity);
-        audioSource.PlayOneShot(currentWeapon.ShootSound);
+        AudioManager.Instance.PlayOneShot(currentWeapon.ShootSound);
     }
 
     public void SwitchWeapon(Projectile projectilePrefab)

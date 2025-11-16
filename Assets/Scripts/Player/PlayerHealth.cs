@@ -10,10 +10,10 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private string gameOverScene = "GameOver";
     [SerializeField] private Animator _animator;
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private AudioSource dangerAudioSource;
     [SerializeField] private int maxHealth = 5;
     [SerializeField] private int currentHealth;
     [SerializeField] private GameObject popupTextPrefab;
+    [SerializeField] private SoundType audioClips;
 
     private PlayerUIHandler playerUI;
     private HealEffect healEffect;
@@ -39,13 +39,13 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth -= damage;
             ShowDamage(damage);
+            AudioManager.Instance.Play(audioClips.CollisionDamage);
             damageEffect.PlayOnDamage();
             playerUI.UpdateHealth(currentHealth);
 
             if (currentHealth <= 1)
             {
-                dangerAudioSource.volume = 0.1f;
-                dangerAudioSource.Play();
+                AudioManager.Instance.Play(audioClips.LowHealth);
             }
 
             if (currentHealth <= 0)
@@ -64,8 +64,9 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth += healAmount;
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+            AudioManager.Instance.PlayOneShot(audioClips.Heal);
             ShowHeal(healAmount);
-            if (currentHealth > 1) dangerAudioSource.Stop();
+            if (currentHealth > 1) AudioManager.Instance.Stop();
 
             playerUI.UpdateHealth(currentHealth);
             healEffect.PlayOnHeal();

@@ -48,6 +48,7 @@ Richard Xiong
 
 ## Additions
 A list of changes since the beta
+- Added more enemies to the level one
 - Main Menu Background Music
 - Added Custom Mouse Cursor
 - Main Menu Backround Images
