@@ -19,9 +19,11 @@ public class BossEnemySound : MonoBehaviour
 
     private IEnumerator PlayAudioAndWait()
     {
+        AudioManager.Instance.StopBackgroundMusic();
         audioSource.PlayOneShot(audioClip);
 
         yield return new WaitForSeconds(audioClip.length);
+        AudioManager.Instance.PlayBackgroundMusic();
 
         Destroy(gameObject);
     }

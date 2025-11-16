@@ -24,8 +24,9 @@ public class AudioManager : MonoBehaviour
         sFXSource.volume = defaultVolume;
         // if (backgroundMusic != null)
         // {
-        //     backgroundMusicSource.clip = backgroundMusic;
-        //     backgroundMusicSource.Play();
+        // backgroundMusicSource.clip = backgroundMusic;
+        backgroundMusicSource.volume = 0.2f;
+        backgroundMusicSource.Play();
         // }
     }
 
@@ -44,5 +45,14 @@ public class AudioManager : MonoBehaviour
     {
         sFXSource.Stop();
         sFXSource.clip = null;
+    }
+    public void StopBackgroundMusic()
+    {
+        backgroundMusicSource.Stop();
+    }
+
+    public void PlayBackgroundMusic()
+    {
+        backgroundMusicSource.Play();
     }
 }
