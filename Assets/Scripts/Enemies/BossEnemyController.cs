@@ -6,7 +6,7 @@ public class BossEnemyController : MonoBehaviour, IDamageable
 {
     [SerializeField] public EnemyType enemyType;
     [SerializeField] public AggroTrigger aggroCollider;
-    [SerializeField] private CameraShake cameraShake; // Assign this in the Inspector
+    // [SerializeField] private CameraShake cameraShake; // Assign this in the Inspector
     [SerializeField] private string playerTag = "Player";
     [SerializeField] private AudioClip deathAudioClip;
     [SerializeField] private GameObject explosionPrefab;
@@ -16,12 +16,18 @@ public class BossEnemyController : MonoBehaviour, IDamageable
     private bool isAggroed = false;
     private int currentHealth;
     private bool isDead = false;
+    // private Camera mainCamera;
 
     private void Start()
     {
         currentHealth = enemyType.maxHealth;
 
         playerScore = GameObject.Find("Player").GetComponent<PlayerScore>();
+
+        // if (cameraShake == null)
+        // {
+        //     cameraShake = GameObject.FindWithTag("MainCamera").GetComponent<CameraShake>();
+        // }
 
         if (aggroCollider != null)
             aggroCollider.OnAggroTriggerEnter2D += ChasePlayer;
@@ -39,8 +45,8 @@ public class BossEnemyController : MonoBehaviour, IDamageable
     {
         if (collision.CompareTag(playerTag))
         {
-            if (!isAggroed)
-                cameraShake.TriggerShake(1.5f, 0.8f);
+            // if (!isAggroed)
+            //     cameraShake.TriggerShake(1.5f, 0.8f);
 
             isAggroed = true;
             playerTransform = collision.transform;
@@ -73,7 +79,7 @@ public class BossEnemyController : MonoBehaviour, IDamageable
     private void playDeathSequence()
     {
         playerScore.UpdateScore(enemyType.points);
-        cameraShake.TriggerShake(deathAudioClip.length - 0.5f, 1f);
+        // cameraShake.TriggerShake(deathAudioClip.length - 0.5f, 1f);
         AudioManager.Instance.InterruptBgMusic(deathAudioClip);
         GameObject explosionFx = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(explosionFx, 1.2f);

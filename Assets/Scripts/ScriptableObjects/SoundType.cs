@@ -11,4 +11,6 @@ public class SoundType : ScriptableObject
     public AudioClip ItemPickup;
     public AudioClip ScorePoint;
     public AudioClip Heal;
+    public AudioClip EquipShield;
+    public AudioClip EquipWeapon;
 }

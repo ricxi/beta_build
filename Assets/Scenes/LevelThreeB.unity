@@ -711,18 +711,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6259762404442050339, guid: 05bb52ba2458adae0b3ec3257d5620bb, type: 3}
   m_PrefabInstance: {fileID: 2039902958}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &212208290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 212208285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f915af375a2369f38b0989078a091a50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &233885017
 GameObject:
   m_ObjectHideFlags: 0
@@ -4416,7 +4404,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1289209553
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: 1184211914, guid: 5098a86f5a59b8afab616a6ad8de3c32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5729,10 +5717,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6259762404442050339, guid: 05bb52ba2458adae0b3ec3257d5620bb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 212208290}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05bb52ba2458adae0b3ec3257d5620bb, type: 3}
 --- !u!1 &2039902959 stripped
 GameObject:
@@ -5944,7 +5929,7 @@ PrefabInstance:
     - target: {fileID: 774078656356038797, guid: 0d0b2ff01c6bd275e99f0cda45104d81, type: 3}
       propertyPath: cameraShake
       value: 
-      objectReference: {fileID: 212208290}
+      objectReference: {fileID: 0}
     - target: {fileID: 5593493490704969032, guid: 0d0b2ff01c6bd275e99f0cda45104d81, type: 3}
       propertyPath: m_Name
       value: Boss_Enemy

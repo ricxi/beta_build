@@ -46,14 +46,14 @@ Richard Xiong
     - https://disruptorart.itch.io/tiny-ships-free-spaceships
 
 
-## Additions
+## Additions since alpha
 A list of changes since the beta
 - Added more enemies to the level one
 - Added Background Music to Main Menu, All levels, Instructions screen
 - Added Custom Mouse Cursor
 - Main Menu Backround Images
 - Main Menu Button Click Sound
-- Added sound to weapons 
+- Added sound to shooting weapons, sounds for equiping shields and weapons, picking up coins, picking up hearts
 - Added low health sound effect
 - Added Boss fight to final level.
 - Updated Main Menu UI

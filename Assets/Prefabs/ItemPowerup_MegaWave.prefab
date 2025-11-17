@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1289209553
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: 261397617, guid: a231a2d164cbe41ccafc363ea3e575a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -157,6 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: -6445332143805806287, guid: 681ed9b03ad8eff34b8787124c4a8cde, type: 3}
+  audioClip: {fileID: 8300000, guid: 0c33d171b9dce537da286f1a9f74792c, type: 3}
 --- !u!95 &5167898208400272051
 Animator:
   serializedVersion: 5

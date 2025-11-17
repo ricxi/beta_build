@@ -17,4 +17,5 @@ MonoBehaviour:
   Death: {fileID: 0}
   ItemPickup: {fileID: 8300000, guid: feb23a48c26d69b28aee035dbeeb4e7a, type: 3}
   ScorePoint: {fileID: 0}
-  Heal: {fileID: 8300000, guid: d257d0961d652c4bbbd883d0ab66699e, type: 3}
+  Heal: {fileID: 8300000, guid: 8562111791bf3d9aba9bc760d1d07910, type: 3}
+  EquipShield: {fileID: 8300000, guid: 7f1988a9c738ee3f8903f655ad69a26f, type: 3}

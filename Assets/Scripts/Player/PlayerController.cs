@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float sprintSpeed = 19f;
     [SerializeField] private Animator _animator;
     [SerializeField] private GameObject shield;
+    [SerializeField] private SoundType playerAudioClips;
 
     private PlayerUIHandler playerUI;
     private RigidbodyConstraints2D baselineContraints;
@@ -78,6 +79,7 @@ public class PlayerController : MonoBehaviour
         // Do I need this null check?
         if (shield != null && !shield.activeSelf)
         {
+            AudioManager.Instance.PlayOneShot(playerAudioClips.EquipShield);
             shield.SetActive(true);
             Invoke(nameof(DeactivateShield), duration);
         }
