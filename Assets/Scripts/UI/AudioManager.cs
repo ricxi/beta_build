@@ -11,7 +11,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private float defaultVolume = 0.3f;
     [SerializeField] private AudioClip[] playerSounds;
 
-    // [SerializeField] private AudioClip backgroundMusic;
+    private Coroutine delayBgMusicHandle;
 
     private void Awake()
     {
@@ -22,12 +22,8 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         sFXSource.volume = defaultVolume;
-        // if (backgroundMusic != null)
-        // {
-        // backgroundMusicSource.clip = backgroundMusic;
         backgroundMusicSource.volume = 0.2f;
         backgroundMusicSource.Play();
-        // }
     }
 
     public void PlayOneShot(AudioClip clip)
@@ -39,6 +35,28 @@ public class AudioManager : MonoBehaviour
     {
         sFXSource.clip = clip;
         sFXSource.Play();
+    }
+
+    // Interrupt the background music with an audio clip.
+    // The background music will pause to play the audio clip,
+    // and will resume after the audio clip is finished playing
+    public void InterruptBgMusic(AudioClip audioClip)
+    {
+        if (delayBgMusicHandle != null)
+        {
+            StopCoroutine(delayBgMusicHandle);
+            delayBgMusicHandle = null;
+        }
+
+        Instance.StopBackgroundMusic();
+        Instance.PlayOneShot(audioClip);
+        delayBgMusicHandle = StartCoroutine(delayRestartBgMusic(audioClip.length));
+    }
+
+    private IEnumerator delayRestartBgMusic(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        AudioManager.Instance.PlayBackgroundMusic();
     }
 
     public void Stop()

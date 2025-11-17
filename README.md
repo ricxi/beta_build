@@ -49,9 +49,12 @@ Richard Xiong
 ## Additions
 A list of changes since the beta
 - Added more enemies to the level one
-- Main Menu Background Music
+- Added Background Music to Main Menu, All levels, Instructions screen
 - Added Custom Mouse Cursor
 - Main Menu Backround Images
 - Main Menu Button Click Sound
 - Added sound to weapons 
 - Added low health sound effect
+- Added Boss fight to final level.
+- Updated Main Menu UI
+- Added audio manager

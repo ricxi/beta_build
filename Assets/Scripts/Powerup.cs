@@ -21,7 +21,10 @@ public class PowerupController : MonoBehaviour
             switch (powerupType.id)
             {
                 case 10:
+                    if (!playerH.CanHeal())
+                        break;
                     playerH.Heal(healAmount);
+                    Destroy(gameObject);
                     break;
                 case 11:
                     player.ActivateShield(5f);
@@ -32,7 +35,6 @@ public class PowerupController : MonoBehaviour
                     break;
             }
 
-            Destroy(gameObject);
         }
     }
 }

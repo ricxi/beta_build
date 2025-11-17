@@ -274,5 +274,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 693a18bafa6befdfa9e07c1006f53839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyType: {fileID: 11400000, guid: 7974b55b95974507f8acb2fa9af67cf3, type: 2}
   aggroCollider: {fileID: 1283386891341572145}
+  cameraShake: {fileID: 0}
   playerTag: Player
+  deathAudioClip: {fileID: 8300000, guid: 59180cd18676d7fa3aec1639cf3d5942, type: 3}
+  explosionPrefab: {fileID: 8480156544181346518, guid: f8074ffdf4eecb41b9eca1c6881a2985, type: 3}

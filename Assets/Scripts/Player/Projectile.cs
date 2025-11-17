@@ -34,7 +34,7 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        EnemyController enemy = collision.collider.gameObject.GetComponent<EnemyController>();
+        IDamageable enemy = collision.collider.gameObject.GetComponent<IDamageable>();
         if (enemy != null)
         {
             enemy.TakeDamage(projectileType.damage);

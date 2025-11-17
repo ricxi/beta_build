@@ -58,6 +58,11 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public bool CanHeal()
+    {
+        return currentHealth != maxHealth;
+    }
+
     public void Heal(int healAmount)
     {
         if (!isDead && currentHealth < maxHealth)

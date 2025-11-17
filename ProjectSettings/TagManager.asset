@@ -70,6 +70,9 @@ TagManager:
   - name: Platform_Layer
     uniqueID: 2501031977
     locked: 0
+  - name: Behind_Player
+    uniqueID: 2478752535
+    locked: 0
   - name: Game_Layer
     uniqueID: 3005757743
     locked: 0
